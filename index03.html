@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tienda de Videojuegos</title>
+</head>
+
+    <style>
+        body{
+        margin: 10px;
+        background-image: url(https://c.wallhere.com/photos/3b/0c/video_games_digital_art_Tetris-182215.jpg!d);
+        background-size: cover;
+        background-size: 85%; 
+        background-attachment: fixed;
+        }
+
+        .juego-container {
+            text-align: center;
+            margin-bottom: 20px; /* Espacio entre las filas de juegos */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .juego {
+            background-color: white;
+            padding: 20px;
+            margin: 1%; /* Espacio entre los cuadros de juego (2% para ajustarse a 5 juegos por línea) */
+            border: 3px solid aquamarine;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+            width: calc(18% - 4%); /* Ancho calculado para ajustarse a 5 juegos por línea y espacio entre ellos */
+            text-align: center; /* Centra el contenido horizontalmente */
+            vertical-align: top;
+            display: inline-block; /* Utiliza display: inline-block para alinear los juegos horizontalmente */
+        }
+
+        .juego img {
+            max-width: 100%;
+            height: 150px; /* Establece la altura deseada para todas las imágenes */
+            width: 200px;  /* Establece el ancho deseado para todas las imágenes */
+            display: block; /* Centra la imagen horizontalmente */
+            margin: 0 auto; /* Centra la imagen horizontalmente */
+        }
+
+        h2 {
+            margin-top: 10px; /* Agrega un espacio entre la imagen y el nombre */
+        }
+
+        button {
+            background-color: aquamarine;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+
+        }
+        button.agregar-carrito {
+            background: none; /* Hace el fondo transparente */
+            border: none; /* Elimina el borde */
+            cursor: pointer;
+             align-items: center;
+            
+        }
+        .button-container {
+            display: flex;
+            justify-content: center; /* Centra horizontalmente los elementos */
+            align-items: center; /* Centra verticalmente los elementos */
+            margin-left: 15%;
+
+            }
+    </style>
+
+<body>
+    <div class="juego-container">
+        <div class="juego">
+            <img src="ImgJuegos/GTA5.jpg" alt="Imagen del Videojuego">
+            <h2>Grand Theft Auto V</h2>
+            <p>Año de Publicación: 2013</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: 1000</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/Fornmit.jpg" alt="Imagen del Otro Videojuego">
+            <h2>Fortnite</h2>
+            <p>Año de Publicación: 2017</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: 500</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+      
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/Zelda.jpg" alt="Imagen del Otro Videojuego">
+            <h2>Legend of Zelda</h2>
+            <p>Año de Publicación: 20XX</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: XX</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+     
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/Far Cry 6.jpg" alt="Imagen del Otro Videojuego">
+            <h2>Far Cry 6</h2>
+            <p>Año de Publicación: 20XX</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: XX</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+         
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+        <div class="juego">
+            <img src="ImgJuegos/descarga.jpeg" alt="Imagen del Videojuego">
+            <h2>Minecraft</h2>
+            <p>Año de Publicación: 2013</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: 1000</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+           
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/gear.jpeg" alt="Imagen del Otro Videojuego">
+            <h2>
+                Gear of War4
+            </h2>
+            <p>Año de Publicación: 2017</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: 500</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+          
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+            
+            
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/hola.jpeg" alt="Imagen del Otro Videojuego">
+            <h2>Legend of Halo Infinite</h2>
+            <p>Año de Publicación: 20XX</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: XX</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+         
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/fifa.jpeg " alt="Imagen del Otro Videojuego">
+            <h2>Fifa 22</h2>
+            <p>Año de Publicación: 20XX</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: XX</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+           
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div> <div class="juego">
+            <img src="ImgJuegos/for.jpeg" alt="Imagen del Videojuego">
+            <h2>Forza Horizon 5</h2>
+            <p>Año de Publicación: 2013</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: 1000</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+            
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/lef.jpeg" alt="Imagen del Otro Videojuego">
+            <h2>LEFT DEAD 4</h2>
+            <p>Año de Publicación: 2017</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: 500</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+         
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/as.jpeg" alt="Imagen del Otro Videojuego">
+            <h2>Asphalt 9</h2>
+            <p>Año de Publicación: 20XX</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: XX</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+            
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/wae.jpeg" alt="Imagen del Otro Videojuego">
+            <h2>Warzone</h2>
+            <p>Año de Publicación: 20XX</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: XX</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+          
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+        <div class="juego">
+            <img src="ImgJuegos/bs.webp" alt="Imagen del Otro Videojuego">
+            <h2>Batman</h2>
+            <p>Año de Publicación: 2017</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: 500</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+            <button>Comprar</button>
+            <div class="button-container">
+             
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/ssss.jpeg" alt="Imagen del Otro Videojuego">
+            <h2>OUTLAST</h2>
+            <p>Año de Publicación: 20XX</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: XX</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+            <button>Comprar</button>
+            <div class="button-container">
+               
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+
+        <div class="juego">
+            <img src="ImgJuegos/need.jpeg" alt="Imagen del Otro Videojuego">
+            <h2>Nedd for speed</h2>
+            <p>Año de Publicación: 20XX</p>
+            <p>Precio: $XX.XX</p>
+            <p>Cantidad Vendida: XX</p>
+            <p>Fecha de Entrega: XX/XX/20XX</p>
+            
+            <div class="button-container">
+                <button>Comprar</button>
+                <button class="agregar-carrito" onclick="agregarAlCarrito('Grand Theft Auto V')">
+                  <div style="width: 70%;">
+                    <img src="ImgJuegos/carrito.jpeg" alt="Descripción de la imagen" style="max-width: 100%; height: auto;">
+                  </div>
+                </button>
+              </div>
+        </div>
+        <!-- Agrega más juegos aquí -->
+        <script>
+            function agregarAlCarrito(nombreJuego) {
+                // Puedes realizar acciones aquí para agregar el juego al carrito
+                // Por ahora, mostraremos un mensaje de alerta
+                alert(`Se agregó "${nombreJuego}" al carrito.`);
+            }
+        </script>
+    </div>
+</body>
+</html>
